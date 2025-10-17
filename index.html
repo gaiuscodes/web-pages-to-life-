@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Web Page with Animations</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Interactive Web Features</h1>
+        <!-- Double-click the header to start/stop color changing animation -->
+        <button id="theme-toggle" class="theme-toggle">Toggle Dark Mode</button>
+    </header>
+
+    <main>
+        <section class="counter-game">
+            <h2>Counter Game</h2>
+            <p>Current Count: <span id="counter">0</span></p>
+            <!-- Buttons now have animated feedback when clicked -->
+            <button id="increment-btn">Increment</button>
+            <button id="decrement-btn">Decrement</button>
+            <button id="reset-btn">Reset</button>
+        </section>
+
+        <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <!-- FAQ items now have smooth expand/collapse animations -->
+            <div class="faq-item">
+                <button class="faq-question">What is this website about?</button>
+                <div class="faq-answer">
+                    <p>This website demonstrates various interactive features using JavaScript and DOM manipulation.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">How do I use the counter game?</button>
+                <div class="faq-answer">
+                    <p>Click the "Increment" button to increase the count, "Decrement" to decrease it, and "Reset" to set it back to zero.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">How does the dark mode work?</button>
+                <div class="faq-answer">
+                    <p>Click the "Toggle Dark Mode" button in the header to switch between light and dark themes.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="dropdown-section">
+            <h2>Dropdown Menu</h2>
+            <!-- Dropdown now has smooth show/hide animations -->
+            <div class="dropdown">
+                <button id="dropdown-btn" class="dropdown-btn">Select an Option</button>
+                <div id="dropdown-content" class="dropdown-content">
+                    <a href="#" data-value="option1">Option 1</a>
+                    <a href="#" data-value="option2">Option 2</a>
+                    <a href="#" data-value="option3">Option 3</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="tabs-section">
+            <h2>Tabbed Interface</h2>
+            <!-- Tabs now have smooth fade-in animations -->
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="tab1">Tab 1</button>
+                <button class="tab-btn" data-tab="tab2">Tab 2</button>
+                <button class="tab-btn" data-tab="tab3">Tab 3</button>
+            </div>
+            <div class="tab-content">
+                <div id="tab1" class="tab-pane active">
+                    <h3>Tab 1 Content</h3>
+                    <p>This is the content for Tab 1. It's visible by default.</p>
+                </div>
+                <div id="tab2" class="tab-pane">
+                    <h3>Tab 2 Content</h3>
+                    <p>This is the content for Tab 2. Click the tab button to view this content.</p>
+                </div>
+                <div id="tab3" class="tab-pane">
+                    <h3>Tab 3 Content</h3>
+                    <p>This is the content for Tab 3. Click the tab button to view this content.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="form-section">
+            <h2>User Registration Form</h2>
+            <!-- Form now has animated validation and submission feedback -->
+            <form id="user-form">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name">
+                    <span class="error-message" id="name-error"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email">
+                    <span class="error-message" id="email-error"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password">
+                    <span class="error-message" id="password-error"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password:</label>
+                    <input type="password" id="confirm-password" name="confirm-password">
+                    <span class="error-message" id="confirm-password-error"></span>
+                </div>
+                
+                <button type="submit">Submit</button>
+                <div id="form-feedback" class="form-feedback"></div>
+            </form>
+        </section>
+        
+        <!-- New section for additional animations -->
+        <section class="animation-section">
+            <h2>Interactive Animations</h2>
+            
+            <!-- Box animation trigger -->
+            <div class="animation-item">
+                <h3>Box Animation</h3>
+                <button id="animate-box-btn">Animate Box</button>
+                <div id="animated-box" class="box"></div>
+            </div>
+            
+            <!-- Card flip animation -->
+            <div class="animation-item">
+                <h3>Card Flip</h3>
+                <button id="flip-card-btn">Flip Card</button>
+                <div class="flip-container" id="flip-container">
+                    <div class="flip-card">
+                        <div class="flip-card-front">
+                            <h4>Front</h4>
+                            <p>Click the button to flip me!</p>
+                        </div>
+                        <div class="flip-card-back">
+                            <h4>Back</h4>
+                            <p>You've flipped the card!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Loading animation -->
+            <div class="animation-item">
+                <h3>Loading Animation</h3>
+                <button id="start-loading-btn">Start Loading</button>
+                <button id="stop-loading-btn">Stop Loading</button>
+                <div id="loading-spinner" class="loading-spinner"></div>
+            </div>
+            
+            <!-- Popup/modal -->
+            <div class="animation-item">
+                <h3>Popup/Modal</h3>
+                <button id="show-popup-btn">Show Popup</button>
+                <div id="popup-modal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h4>Popup Modal</h4>
+                        <p>This is a popup modal that slides in and fades out!</p>
+                        <button id="close-popup-btn">Close</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
